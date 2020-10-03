@@ -18,6 +18,13 @@ function readNotes() {
 
 module.exports = function (app) {
   app.get("/api/notes", function (req, res) {
+    noteData = readNotes();
     res.JSON(noteData);
+  });
+
+  app.post("/api/notes", function (req, res) {
+    noteData.push(req.body);
+    fs.writeFileSync("../db/db.json", JSON.stringify(noteData), "utf8");
+    res.JSON(true);
   });
 };
