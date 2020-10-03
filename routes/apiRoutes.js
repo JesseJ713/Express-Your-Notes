@@ -16,6 +16,7 @@ function readNotes() {
   return noteData;
 }
 
+// GET, POST, DELETE requests
 module.exports = function (app) {
   app.get("/api/notes", function (req, res) {
     noteData = readNotes();
