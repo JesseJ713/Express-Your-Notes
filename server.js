@@ -16,6 +16,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Establishes routes that will create a "map" for our server files
-
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+
+// Server Listener
+app.listen(PORT, function () {
+  console.log("App listening on PORT: " + PORT);
+});
