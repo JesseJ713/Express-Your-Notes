@@ -29,7 +29,7 @@ module.exports = function (app) {
     res.JSON(true);
   });
 
-  app.delete("/api/notes", function (req, res) {
+  app.delete("/api/notes/:id", function (req, res) {
     const noteId = req.params.id;
 
     let note = noteData.filter((note) => {
