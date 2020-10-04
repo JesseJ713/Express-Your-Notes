@@ -4,7 +4,7 @@ const fs = require("fs");
 let noteData = readNotes();
 
 function readNotes() {
-  let data = fs.readFileSync("../db/db.json", "utf-8");
+  let data = fs.readFileSync("../db/db.json", "utf8");
 
   let userInput = JSON.parse(data);
 
@@ -13,7 +13,7 @@ function readNotes() {
     userInput[i].id = "" + i;
   }
 
-  return noteData;
+  return userInput;
 }
 
 // GET, POST, DELETE requests
