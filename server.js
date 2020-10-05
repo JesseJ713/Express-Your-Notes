@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Pointing Express to `public` directory
-app.use(express.static("public"));
+app.use(express.static("./public"));
 
 // Establishes routes that will create a "map" for our server files
 require("./routes/apiRoutes")(app);
