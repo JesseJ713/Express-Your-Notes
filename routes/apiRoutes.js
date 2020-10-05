@@ -21,13 +21,13 @@ const noteObjects = require("../db/db");
 module.exports = function (app) {
   app.get("/api/notes", function (req, res) {
     // noteData = readNotes();
-    res.JSON(noteObjects);
+    res.json(noteObjects);
   });
 
   app.post("/api/notes", function (req, res) {
     noteObjects.push(req.body);
     // fs.writeFileSync("../db/db.js", JSON.stringify(noteData), "utf8");
-    res.JSON(true);
+    res.json(true);
   });
 
   app.delete("/api/notes/:id", function (req, res) {
