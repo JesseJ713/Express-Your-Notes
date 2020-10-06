@@ -4,7 +4,7 @@
 
 ![GitHub](https://img.shields.io/github/license/JesseJ713/Express-Your-Notes?style=plastic)
 
-![Express-Your-Notes Screenshot](note-taker-screenshot.PNG?raw=true "Express-Your-Notes")
+![Express-Your-Notes Screenshot](./assets/note-taker-screenshot.PNG?raw=true "Express-Your-Notes")
 
 ---
 
@@ -32,6 +32,8 @@ Express
 ---
 
 ## Usage
+
+An application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
 ---
 
